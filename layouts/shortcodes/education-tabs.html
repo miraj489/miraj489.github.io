@@ -28,13 +28,38 @@
             <span class="pill-badge">🎓 DIU</span>
           </div>
         </div>
-        <figure class="edu-photo-card">
-          <img class="edu-photo" src="{{ $universityImage | absURL }}" data-fallback="{{ $universityFallback }}" alt="Daffodil International University campus" onerror="this.onerror=null;this.src=this.dataset.fallback;">
-          <figcaption class="edu-photo-overlay">
-            <strong>Daffodil International University</strong>
-            <small>Custom image: static{{ $universityImage }}</small>
-          </figcaption>
-        </figure>
+        <div class="edu-media-column">
+          <figure class="edu-photo-card">
+            <img class="edu-photo" src="{{ $universityImage | absURL }}" data-fallback="{{ $universityFallback }}" alt="Daffodil International University campus" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+            <figcaption class="edu-photo-overlay">
+              <strong>Daffodil International University</strong>
+              <small>Custom image: static{{ $universityImage }}</small>
+            </figcaption>
+          </figure>
+          <div class="certificate-grid">
+            <article class="certificate-card">
+              <button class="certificate-trigger" type="button" data-certificate="/images/certificates/diu-degree.png" data-certificate-title="Daffodil International University degree certificate">
+                <img src="/images/certificates/diu-degree.png" alt="Daffodil International University degree certificate">
+              </button>
+              <strong>🎓 B.Sc. degree certificate</strong>
+              <small>Computer Science &amp; Engineering · CGPA 3.52</small>
+            </article>
+            <article class="certificate-card">
+              <button class="certificate-trigger" type="button" data-certificate="/images/certificates/bsc-transcript-1.png" data-certificate-title="B.Sc. academic transcript page one">
+                <img src="/images/certificates/bsc-transcript-1.png" alt="B.Sc. academic transcript page one">
+              </button>
+              <strong>📄 B.Sc. transcript · Page 1</strong>
+              <small>Daffodil International University</small>
+            </article>
+            <article class="certificate-card">
+              <button class="certificate-trigger" type="button" data-certificate="/images/certificates/bsc-transcript-2.png" data-certificate-title="B.Sc. academic transcript page two">
+                <img src="/images/certificates/bsc-transcript-2.png" alt="B.Sc. academic transcript page two">
+              </button>
+              <strong>📄 B.Sc. transcript · Page 2</strong>
+              <small>Daffodil International University</small>
+            </article>
+          </div>
+        </div>
       </div>
     </article>
 
@@ -54,13 +79,31 @@
             <span class="pill-badge">📍 Pabna</span>
           </div>
         </div>
-        <figure class="edu-photo-card">
-          <img class="edu-photo" src="{{ $collegeImage | absURL }}" data-fallback="{{ $collegeFallback }}" alt="Shahid M Monsur Ali College campus" onerror="this.onerror=null;this.src=this.dataset.fallback;">
-          <figcaption class="edu-photo-overlay">
-            <strong>Shahid M Monsur Ali College</strong>
-            <small>Custom image: static{{ $collegeImage }}</small>
-          </figcaption>
-        </figure>
+        <div class="edu-media-column">
+          <figure class="edu-photo-card">
+            <img class="edu-photo" src="{{ $collegeImage | absURL }}" data-fallback="{{ $collegeFallback }}" alt="Shahid M Monsur Ali College campus" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+            <figcaption class="edu-photo-overlay">
+              <strong>Shahid M Monsur Ali College</strong>
+              <small>Custom image: static{{ $collegeImage }}</small>
+            </figcaption>
+          </figure>
+          <div class="certificate-grid">
+            <article class="certificate-card">
+              <button class="certificate-trigger" type="button" data-certificate="/images/certificates/hsc-transcript.png" data-certificate-title="Higher Secondary Certificate academic transcript">
+                <img src="/images/certificates/hsc-transcript.png" alt="Higher Secondary Certificate academic transcript">
+              </button>
+              <strong>📚 HSC academic transcript</strong>
+              <small>Higher Secondary Certificate Examination · 2020</small>
+            </article>
+            <article class="certificate-card">
+              <button class="certificate-trigger" type="button" data-certificate="/images/certificates/college-testimonial.png" data-certificate-title="Shahid M. Monsur Ali College testimonial">
+                <img src="/images/certificates/college-testimonial.png" alt="Shahid M. Monsur Ali College testimonial">
+              </button>
+              <strong>🏛️ College testimonial</strong>
+              <small>Shahid M. Monsur Ali College, Pabna</small>
+            </article>
+          </div>
+        </div>
       </div>
     </article>
 
@@ -79,17 +122,41 @@
             <span class="pill-badge">⭐ GPA 4.33</span>
           </div>
         </div>
-        <figure class="edu-photo-card">
-          <img class="edu-photo" src="{{ $schoolImage | absURL }}" data-fallback="{{ $schoolFallback }}" alt="Bansherbada M.L. High School campus" onerror="this.onerror=null;this.src=this.dataset.fallback;">
-          <figcaption class="edu-photo-overlay">
-            <strong>Bansherbada M.L. High School</strong>
-            <small>Custom image: static{{ $schoolImage }}</small>
-          </figcaption>
-        </figure>
+        <div class="edu-media-column">
+          <figure class="edu-photo-card">
+            <img class="edu-photo" src="{{ $schoolImage | absURL }}" data-fallback="{{ $schoolFallback }}" alt="Bansherbada M.L. High School campus" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+            <figcaption class="edu-photo-overlay">
+              <strong>Bansherbada M.L. High School</strong>
+              <small>Custom image: static{{ $schoolImage }}</small>
+            </figcaption>
+          </figure>
+          <div class="certificate-grid">
+            <article class="certificate-card">
+              <button class="certificate-trigger" type="button" data-certificate="/images/certificates/school-ssc-transcript.png" data-certificate-title="Secondary School Certificate academic transcript">
+                <img src="/images/certificates/school-ssc-transcript.png" alt="Secondary School Certificate academic transcript">
+              </button>
+              <strong>📘 SSC academic transcript</strong>
+              <small>Secondary School Certificate Examination · 2018 · GPA 4.22</small>
+            </article>
+            <article class="certificate-card">
+              <button class="certificate-trigger" type="button" data-certificate="/images/certificates/school-ssc-certificate.png" data-certificate-title="Secondary School Certificate">
+                <img src="/images/certificates/school-ssc-certificate.png" alt="Secondary School Certificate">
+              </button>
+              <strong>🏫 SSC certificate</strong>
+              <small>Bansherbada High School, Pabna · 2018</small>
+            </article>
+          </div>
+        </div>
       </div>
     </article>
   </div>
 </section>
+
+<div class="certificate-lightbox" data-certificate-lightbox hidden role="dialog" aria-modal="true" aria-label="Certificate preview">
+  <button class="certificate-lightbox-close" type="button" data-certificate-close aria-label="Close certificate preview">&times;</button>
+  <img class="certificate-lightbox-image" data-certificate-image alt="">
+  <p class="certificate-lightbox-title" data-certificate-title></p>
+</div>
 
 <script>
 (() => {
@@ -126,6 +193,34 @@
         activate(buttons[next].dataset.target);
       });
     });
+  });
+})();
+
+(() => {
+  const lightbox = document.querySelector("[data-certificate-lightbox]");
+  if (!lightbox || lightbox.dataset.initialized) return;
+  lightbox.dataset.initialized = "true";
+  const image = lightbox.querySelector("[data-certificate-image]");
+  const title = lightbox.querySelector("[data-certificate-title]");
+  const close = () => {
+    lightbox.hidden = true;
+    document.body.classList.remove("certificate-lightbox-open");
+  };
+
+  document.querySelectorAll("[data-certificate]").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      image.src = trigger.dataset.certificate;
+      image.alt = trigger.dataset.certificateTitle;
+      title.textContent = trigger.dataset.certificateTitle;
+      lightbox.hidden = false;
+      document.body.classList.add("certificate-lightbox-open");
+    });
+  });
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox || event.target === close) close();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !lightbox.hidden) close();
   });
 })();
 </script>
