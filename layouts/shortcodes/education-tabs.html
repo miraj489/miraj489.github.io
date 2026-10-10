@@ -1,0 +1,131 @@
+{{- $id := printf "edu-tabs-%d" now.UnixNano -}}
+{{- $universityImage := .Get "universityImage" | default "/images/diu.jpg" -}}
+{{- $collegeImage := .Get "collegeImage" | default "/images/shahid-m-monsur-ali-college.jpg" -}}
+{{- $schoolImage := .Get "schoolImage" | default "/images/bansherbada-school.jpg" -}}
+{{- $universityFallback := .Get "universityFallback" | default "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=85" -}}
+{{- $collegeFallback := .Get "collegeFallback" | default "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=85" -}}
+{{- $schoolFallback := .Get "schoolFallback" | default "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=85" -}}
+<section class="edu-tabs" id="{{ $id }}" data-edu-tabs>
+  <div class="edu-tab-buttons" role="tablist" aria-label="Education tabs">
+    <button class="edu-tab-btn active" role="tab" aria-selected="true" aria-controls="{{ $id }}-university" id="{{ $id }}-btn-university" data-target="university">🎓 University</button>
+    <button class="edu-tab-btn" role="tab" aria-selected="false" aria-controls="{{ $id }}-college" id="{{ $id }}-btn-college" data-target="college">🏛️ College</button>
+    <button class="edu-tab-btn" role="tab" aria-selected="false" aria-controls="{{ $id }}-school" id="{{ $id }}-btn-school" data-target="school">🏫 School</button>
+  </div>
+
+  <div class="edu-tab-panels">
+    <article class="edu-tab-panel active" role="tabpanel" id="{{ $id }}-university" aria-labelledby="{{ $id }}-btn-university" data-panel="university">
+      <div class="edu-layout">
+        <div class="edu-card">
+          <h3>🎓 University Education</h3>
+          <ul>
+            <li><strong>Postgraduate:</strong> M.Sc in Data Science, Daffodil International University (Running)</li>
+            <li><strong>Undergraduate:</strong> B.Sc in Computer Science and Engineering, Daffodil International University</li>
+            <li><strong>Result:</strong> CGPA <strong>3.52</strong></li>
+          </ul>
+          <div class="badge-row">
+            <span class="pill-badge">📊 Data Science</span>
+            <span class="pill-badge">💻 CSE</span>
+            <span class="pill-badge">🎓 DIU</span>
+          </div>
+        </div>
+        <figure class="edu-photo-card">
+          <img class="edu-photo" src="{{ $universityImage | absURL }}" data-fallback="{{ $universityFallback }}" alt="Daffodil International University campus" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+          <figcaption class="edu-photo-overlay">
+            <strong>Daffodil International University</strong>
+            <small>Custom image: static{{ $universityImage }}</small>
+          </figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="edu-tab-panel" role="tabpanel" id="{{ $id }}-college" aria-labelledby="{{ $id }}-btn-college" data-panel="college" hidden>
+      <div class="edu-layout">
+        <div class="edu-card">
+          <h3>🏛️ College Education</h3>
+          <ul>
+            <li><strong>Level:</strong> Higher Secondary Certificate (HSC)</li>
+            <li><strong>Institution:</strong> Shahid M Monsur Ali College, Pabna</li>
+            <li><strong>Year:</strong> 2020</li>
+            <li><strong>Result:</strong> GPA <strong>4.33</strong></li>
+          </ul>
+          <div class="badge-row">
+            <span class="pill-badge">📚 HSC</span>
+            <span class="pill-badge">⭐ GPA 4.33</span>
+            <span class="pill-badge">📍 Pabna</span>
+          </div>
+        </div>
+        <figure class="edu-photo-card">
+          <img class="edu-photo" src="{{ $collegeImage | absURL }}" data-fallback="{{ $collegeFallback }}" alt="Shahid M Monsur Ali College campus" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+          <figcaption class="edu-photo-overlay">
+            <strong>Shahid M Monsur Ali College</strong>
+            <small>Custom image: static{{ $collegeImage }}</small>
+          </figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="edu-tab-panel" role="tabpanel" id="{{ $id }}-school" aria-labelledby="{{ $id }}-btn-school" data-panel="school" hidden>
+      <div class="edu-layout">
+        <div class="edu-card">
+          <h3>🏫 School Education</h3>
+          <ul>
+            <li><strong>SSC (2018):</strong> GPA <strong>4.22</strong></li>
+            <li><strong>JSC (2015):</strong> GPA <strong>4.33</strong></li>
+            <li><strong>Institution:</strong> Bansherbada M.L. High School</li>
+          </ul>
+          <div class="badge-row">
+            <span class="pill-badge">🏫 SSC</span>
+            <span class="pill-badge">📘 JSC</span>
+            <span class="pill-badge">⭐ GPA 4.33</span>
+          </div>
+        </div>
+        <figure class="edu-photo-card">
+          <img class="edu-photo" src="{{ $schoolImage | absURL }}" data-fallback="{{ $schoolFallback }}" alt="Bansherbada M.L. High School campus" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+          <figcaption class="edu-photo-overlay">
+            <strong>Bansherbada M.L. High School</strong>
+            <small>Custom image: static{{ $schoolImage }}</small>
+          </figcaption>
+        </figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<script>
+(() => {
+  if (window.__eduTabsInit) return;
+  window.__eduTabsInit = true;
+
+  const tabRoots = document.querySelectorAll("[data-edu-tabs]");
+  tabRoots.forEach((root) => {
+    const buttons = Array.from(root.querySelectorAll(".edu-tab-btn"));
+    const panels = Array.from(root.querySelectorAll(".edu-tab-panel"));
+
+    const activate = (target) => {
+      buttons.forEach((btn) => {
+        const active = btn.dataset.target === target;
+        btn.classList.toggle("active", active);
+        btn.setAttribute("aria-selected", active ? "true" : "false");
+      });
+
+      panels.forEach((panel) => {
+        const active = panel.dataset.panel === target;
+        panel.classList.toggle("active", active);
+        panel.hidden = !active;
+      });
+    };
+
+    buttons.forEach((btn, idx) => {
+      btn.addEventListener("click", () => activate(btn.dataset.target));
+      btn.addEventListener("keydown", (event) => {
+        if (!["ArrowRight", "ArrowLeft"].includes(event.key)) return;
+        event.preventDefault();
+        const step = event.key === "ArrowRight" ? 1 : -1;
+        const next = (idx + step + buttons.length) % buttons.length;
+        buttons[next].focus();
+        activate(buttons[next].dataset.target);
+      });
+    });
+  });
+})();
+</script>

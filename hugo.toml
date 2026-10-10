@@ -1,0 +1,63 @@
+# Use root-relative URLs so navigation works on localhost and static hosting.
+# Replace this with your real deployed URL only when the site has a fixed domain.
+baseURL = 'baseURL = 'https://miraj489.github.io/''
+languageCode = 'en-us'
+title = 'Md Mirajul Rahman | Portfolio'
+theme = 'PaperMod'
+
+[params]
+  ShowReadingTime = false
+  ShowShareButtons = false
+
+[params.homeInfoParams]
+  Title = "Hi, I'm Md Mirajul Rahman 👋"
+  Content = "Aspiring Software Developer & Graduate Student (M.Sc. in Data Science) at Daffodil International University. Passionate about Deep Learning, Cancer Imaging Research, Fitness, and Photography."
+  Image = "/images/profile.jpg"
+  ImageAlt = "Md Mirajul Rahman profile photo"
+
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:mirajulbml1234@gmail.com"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/md-mirajul-rahman-95653038b"
+
+[[params.socialIcons]]
+  name = "facebook"
+  url = "https://www.facebook.com/share/1DmrnHPjSX/"
+
+[[params.socialIcons]]
+  name = "instagram"
+  url = "https://www.instagram.com/mdmirajul740?cplk=MWZhejY0cGx1OGN4NA=="
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About & Profile"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    identifier = "education"
+    name = "Education"
+    url = "/education/"
+    weight = 20
+  [[menu.main]]
+    identifier = "research"
+    name = "Publications & Skills"
+    url = "/research/"
+    weight = 30
+  [[menu.main]]
+    identifier = "activities"
+    name = "Activities & Passion"
+    url = "/activities/"
+    weight = 40
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

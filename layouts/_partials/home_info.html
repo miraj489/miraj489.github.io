@@ -1,0 +1,21 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info modern-hero">
+    <div class="home-hero-top">
+        {{- with .Image }}
+        <figure class="hero-avatar-wrap">
+            <img class="hero-avatar" src="{{ . | absURL }}" alt="{{ $.Site.Params.homeInfoParams.ImageAlt | default "Profile photo" }}">
+        </figure>
+        {{- end }}
+        <header class="entry-header">
+            <h1>{{ .Title | markdownify }}</h1>
+        </header>
+    </div>
+    <div class="entry-content md-content">
+        {{ $opts := dict "display" "block" }}
+        {{ .Content | $.Page.RenderString $opts }}
+    </div>
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+    </footer>
+</article>
+{{- end -}}
