@@ -1,5 +1,3 @@
-# Use root-relative URLs so navigation works on localhost and static hosting.
-# Replace this with your real deployed URL only when the site has a fixed domain.
 baseURL = 'https://miraj489.github.io/'
 languageCode = 'en-us'
 title = 'Md Mirajul Rahman | Portfolio'
@@ -9,11 +7,14 @@ theme = 'PaperMod'
   ShowReadingTime = false
   ShowShareButtons = false
 
-[params.homeInfoParams]
-  Title = "Hi, I'm Md Mirajul Rahman 👋"
-  Content = "Aspiring Software Developer & Graduate Student (M.Sc. in Data Science) at Daffodil International University. Passionate about Deep Learning, Cancer Imaging Research, Fitness, and Photography."
-  Image = "/images/profile.jpg"
-  ImageAlt = "Md Mirajul Rahman profile photo"
+[params.profileMode]
+  enabled = true
+  title = "Hi, I'm Md Mirajul Rahman 👋"
+  subtitle = "Aspiring Software Developer & Graduate Student (M.Sc. in Data Science) at Daffodil International University. Passionate about Deep Learning, Cancer Imaging Research, Fitness, and Photography."
+  imageUrl = "/images/profile.jpg"
+  imageTitle = "Md Mirajul Rahman profile photo"
+  imageWidth = 150
+  imageHeight = 150
 
 [[params.socialIcons]]
   name = "email"
