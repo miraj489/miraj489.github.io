@@ -19,8 +19,8 @@ layout: "page"
 
   <article class="modern-card">
     <h3>👨‍👩‍👦 Family Information</h3>
-    <p><strong>Father:</strong> Mohammad Badshah Pramanik</p>
-    <p><strong>Mother:</strong> Most. Nasima Khatun</p>
+    <p><strong>Father:</strong> Md Badsha Ali</p>
+    <p><strong>Mother:</strong> Mst Nasima Khatun</p>
     <div class="badge-row">
       <span class="pill-badge">🏡 Family Support</span>
       <span class="pill-badge">🎯 Discipline</span>
@@ -30,7 +30,8 @@ layout: "page"
   <article class="modern-card">
     <h3>📍 Address</h3>
     <p><strong>Present:</strong> Yunus Khan Scholar Garden-2, Daffodil International University, Ashulia, Savar, Dhaka, Bangladesh</p>
-    <p><strong>Permanent:</strong> Madhpur, Dapunia, Pabna, Bangladesh</p>
+    <p><strong>Permanent:</strong> Kumudpur, Pabna District, Rajshahi Division, Bangladesh</p>
+    <p><strong>NID:</strong> 7808652890</p>
     <div class="badge-row">
       <span class="pill-badge">🇧🇩 Bangladesh</span>
       <span class="pill-badge">🎓 DIU Campus</span>

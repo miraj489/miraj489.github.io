@@ -90,6 +90,43 @@ body {
     padding: 0.3rem 0.75rem;
 }
 
+/* Brand colors for PaperMod social links */
+.social-icons a {
+    transition: color 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-2px);
+}
+
+.social-icons a[href*="linkedin.com"] {
+    color: #0077b5;
+}
+
+.social-icons a[href*="facebook.com"] {
+    color: #1877f2;
+}
+
+.social-icons a[href*="instagram.com"] {
+    color: #e4405f;
+}
+
+.social-icons a[href^="mailto:"] {
+    color: #ea4335;
+}
+
+.social-icons a[href*="github.com"] {
+    color: #333333;
+}
+
+[data-theme="dark"] .social-icons a[href*="github.com"] {
+    color: #f0f6fc;
+}
+
+.social-icons a:hover {
+    filter: brightness(1.12) saturate(1.15);
+}
+
 /* Breathing room below the floating header */
 .main {
     padding-top: clamp(2.2rem, 7vh, 5rem);
@@ -372,15 +409,32 @@ body {
 }
 
 .edu-media-column {
-    display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
+    display: contents;
+}
+
+.edu-layout > .edu-photo-card {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.edu-layout > .edu-card {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.edu-layout > .edu-media-column > .edu-photo-card {
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .certificate-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 0.7rem;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    margin-top: 0.1rem;
 }
 
 .certificate-card {
@@ -492,6 +546,21 @@ body {
 
     .edu-layout {
         grid-template-columns: 1fr;
+    }
+
+    .edu-layout > .edu-media-column > .edu-photo-card {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .edu-layout > .edu-media-column > .certificate-grid {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .edu-layout > .edu-card {
+        grid-column: 1;
+        grid-row: 1;
     }
 
     .edu-photo-card,
