@@ -1,6 +1,6 @@
 # Use root-relative URLs so navigation works on localhost and static hosting.
 # Replace this with your real deployed URL only when the site has a fixed domain.
-baseURL = 'baseURL = 'https://miraj489.github.io/''
+baseURL = 'https://miraj489.github.io/'
 languageCode = 'en-us'
 title = 'Md Mirajul Rahman | Portfolio'
 theme = 'PaperMod'
